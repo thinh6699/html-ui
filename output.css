@@ -623,8 +623,7 @@ header a.absolute {
   justify-content: space-between;
   gap: 12px;
   background-color: #F7F7FA;
-  height: 40px;
-  padding-inline: 16px;
+  padding: 10px 16px;
   border-radius: 4px;
 }
 
@@ -633,7 +632,6 @@ header a.absolute {
   align-items: center;
   gap: 12px;
   background-color: #F7F7FA;
-  height: 78px;
   padding: 12px;
   border-radius: 8px;
 }
@@ -686,12 +684,12 @@ input {
   height: 2.5rem;
 }
 
-.h-\[90\%\]{
-  height: 90%;
-}
-
 .h-\[calc\(100vh-48px\)\]{
   height: calc(100vh - 48px);
+}
+
+.min-h-\[54px\]{
+  min-height: 54px;
 }
 
 .w-10{
@@ -744,6 +742,16 @@ input {
 
 .overflow-auto{
   overflow: auto;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rounded{

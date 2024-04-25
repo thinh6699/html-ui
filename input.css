@@ -53,8 +53,7 @@ input {
     justify-content: space-between;
     gap: 12px;
     background-color: theme('colors.neutral-50');
-    height: 40px;
-    padding-inline: 16px;
+    padding: 10px 16px;
     border-radius: 4px;
   }
 
@@ -63,7 +62,6 @@ input {
     align-items: center;
     gap: 12px;
     background-color: theme('colors.neutral-50');
-    height: 78px;
     padding: 12px;
     border-radius: 8px;
   }
