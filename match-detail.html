@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin trận đấu</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 z-[9999]">
+      <a href="./match-list.html" class="absolute">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.293 12.707C1.20036 12.6139 1.12696 12.5034 1.077 12.382C1.02618 12.261 1 12.1311 1 12C1 11.8688 1.02618 11.7389 1.077 11.618C1.12696 11.4965 1.20036 11.3861 1.293 11.293L9.293 3.29296C9.38525 3.19745 9.4956 3.12127 9.6176 3.06886C9.7396 3.01645 9.87082 2.98886 10.0036 2.98771C10.1364 2.98655 10.2681 3.01186 10.391 3.06214C10.5139 3.11242 10.6255 3.18667 10.7194 3.28056C10.8133 3.37446 10.8875 3.48611 10.9378 3.60901C10.9881 3.7319 11.0134 3.86358 11.0123 3.99636C11.0111 4.12914 10.9835 4.26036 10.9311 4.38236C10.8787 4.50437 10.8025 4.61471 10.707 4.70696L4.41401 11H22C22.2652 11 22.5196 11.1053 22.7071 11.2929C22.8946 11.4804 23 11.7347 23 12C23 12.2652 22.8946 12.5195 22.7071 12.7071C22.5196 12.8946 22.2652 13 22 13H4.41401L10.707 19.293C10.8892 19.4816 10.99 19.7342 10.9877 19.9964C10.9854 20.2586 10.8802 20.5094 10.6948 20.6948C10.5094 20.8802 10.2586 20.9854 9.99641 20.9876C9.73421 20.9899 9.48161 20.8891 9.293 20.707L1.293 12.707Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+      <p class="text-center font-bold">Thông tin trận đấu</p>
+    </header>
+
+    <main class="flex flex-col overflow-auto h-[calc(100vh-48px)]">
+      <section
+        class="relative bg-match-detail bg-no-repeat bg-cover bg-center pt-[38%] mb-4"
+      >
+        <div
+          class="bg-gradient-to-r from-green-rgba to-black-rgba-03 absolute top-0 left-0 right-0 bottom-0"
+        ></div>
+        <div class="absolute top-0 left-0 right-0 bottom-0">
+          <div class="px-4 py-8 h-full text-white flex flex-col">
+            <p class="font-semibold mb-1">AFC - Champion League</p>
+            <div class="flex items-center gap-1 text-neutral-300 mb-4">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.99998 1.33331C6.68144 1.33331 5.39251 1.72431 4.29618 2.45685C3.19985 3.18939 2.34537 4.23058 1.84079 5.44876C1.3362 6.66693 1.20418 8.00738 1.46141 9.30058C1.71865 10.5938 2.35359 11.7817 3.28594 12.714C4.21829 13.6464 5.40617 14.2813 6.69938 14.5385C7.99259 14.7958 9.33303 14.6638 10.5512 14.1592C11.7694 13.6546 12.8106 12.8001 13.5431 11.7038C14.2757 10.6075 14.6666 9.31852 14.6666 7.99998C14.6666 7.1245 14.4942 6.25759 14.1592 5.44876C13.8241 4.63992 13.3331 3.90499 12.714 3.28593C12.095 2.66688 11.36 2.17581 10.5512 1.84078C9.74237 1.50575 8.87546 1.33331 7.99998 1.33331ZM11.3333 8.66665H7.99998C7.82317 8.66665 7.6536 8.59641 7.52858 8.47138C7.40355 8.34636 7.33332 8.17679 7.33332 7.99998V3.99998C7.33332 3.82317 7.40355 3.6536 7.52858 3.52858C7.6536 3.40355 7.82317 3.33331 7.99998 3.33331C8.17679 3.33331 8.34636 3.40355 8.47139 3.52858C8.59641 3.6536 8.66665 3.82317 8.66665 3.99998V7.33331H11.3333C11.5101 7.33331 11.6797 7.40355 11.8047 7.52858C11.9297 7.6536 12 7.82317 12 7.99998C12 8.17679 11.9297 8.34636 11.8047 8.47138C11.6797 8.59641 11.5101 8.66665 11.3333 8.66665Z"
+                  fill="#D4D9DF"
+                />
+              </svg>
+              <p class="text-xs font-semibold">22/06, 17:00:00 (GMP +07:00)</p>
+            </div>
+            <div class="flex-center gap-1 font-semibold flex-grow">
+              <span class="flex-grow text-center">Yokohama F Marios</span>
+              <span class="text-success font-bold">vs</span>
+              <span class="flex-grow text-center">Ulsan Hyundai FC</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container bg-white py-3 px-4 mb-4">
+        <button
+          type="button"
+          class="collapse-btn flex items-center justify-between w-full gap-3"
+        >
+          <p class="font-bold text-neutral-700">Toàn trận</p>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
+          </svg>
+        </button>
+        <div class="grid transition-collapse grid-template-rows-1">
+          <div class="grid grid-cols-2 gap-2 overflow-hidden">
+            <button
+              type="button"
+              data-target=".modal-confirm-bet"
+              class="bet-item"
+            >
+              <p class="text-neutral-500">over 2.5</p>
+              <p class="text-primary font-bold">8.60</p>
+            </button>
+            <button
+              type="button"
+              data-target=".modal-confirm-bet"
+              class="bet-item"
+            >
+              <p class="text-neutral-500">over 2.5</p>
+              <p class="text-primary font-bold">8.60</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container bg-white py-3 px-4">
+        <button
+          type="button"
+          class="collapse-btn flex items-center justify-between w-full gap-3"
+        >
+          <p class="font-bold text-neutral-700">Handicap</p>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
+          </svg>
+        </button>
+        <div class="grid transition-collapse grid-template-rows-1">
+          <div class="flex flex-col gap-2 overflow-hidden">
+            <div class="flex-center gap-3 text-neutral-600 font-semibold">
+              <span class="text-center flex-grow my-3">Yokohama F Marios</span>
+              <span class="text-center flex-grow my-3">Ulsan Hyundai FC</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                data-target=".modal-confirm-bet"
+                class="bet-item !mt-0"
+              >
+                <p class="text-neutral-500">(-2.75)</p>
+                <p class="text-primary font-bold">8.60</p>
+              </button>
+              <button
+                type="button"
+                data-target=".modal-confirm-bet"
+                class="bet-item !mt-0"
+              >
+                <p class="text-neutral-500">(+2.75)</p>
+                <p class="text-primary font-bold">8.60</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets//js/index.js"></script>
+  </body>
+
+  <!-- Modal -->
+  <div class="modal modal-confirm-bet flex flex-col border-t-2 border-primary">
+    <div class="px-4 py-3">
+      <p class="text-neutral-700 mb-1">Yokohama F Marios x Ulsan Hyundai FC</p>
+      <p class="text-neutral-600 text-xs mb-1">Handicap</p>
+      <div class="flex items-center justify-between gap-2 leading-[18px]">
+        <p class="font-bold text-neutral-700">(-2.75) Yokohama F Marios</p>
+        <p class="font-bold text-functional-red">-0.60</p>
+      </div>
+    </div>
+    <div class="seperate h-[1px] w-full bg-neutral-100"></div>
+    <div class="p-4">
+      <div class="flex items-center gap-4 font-bold">
+        <button
+          class="btn bg-neutral-100 h-10 w-[120px] text-neutral-600"
+          type="button"
+        >
+          Hủy
+        </button>
+        <button class="btn bg-primary h-10 flex-grow text-white" type="button">
+          Xác nhận đặt kèo
+        </button>
+      </div>
+    </div>
+  </div>
+</html>
