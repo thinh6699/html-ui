@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', handleClickoutsideModal)
-
   // modal element
   const modal = document.querySelector('.modal')
   const modalContent = modal?.querySelector('.modal-content')
@@ -9,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function closeModal() {
     modal.classList.remove('show')
+    document.body.classList.remove('overflow-hidden')
     const selected = document.querySelector('.bet-item.selected')
     selected.classList.remove('selected')
   }
@@ -32,4 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // submit action
     closeModal()
   })
+
+  document.addEventListener('click', handleClickoutsideModal)
 })

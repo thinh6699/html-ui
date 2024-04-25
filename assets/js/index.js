@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const collapseBtnList = document.querySelectorAll('.collapse-btn')
   const selectBetBtnList = document.querySelectorAll('.bet-item')
-  const dropdownBtn = document.querySelector('.dropdown-btn')
+  const dropdownBtnList = document.querySelectorAll('.dropdown-btn')
+  const dropdownList = document.querySelectorAll('.list-dropdown')
 
   // collapse bet info item
   collapseBtnList.forEach(btn => {
@@ -26,11 +27,47 @@ document.addEventListener('DOMContentLoaded', function () {
       const target = btn.getAttribute('data-target')
       const modal = document.querySelector(target)
       modal.classList.add('show')
+      document.body.classList.add('overflow-hidden')
     })
   })
 
-  dropdownBtn?.addEventListener('click', function () {
-    const listDropdown = dropdownBtn.querySelector('.list-dropdown')
-    listDropdown.classList.toggle('show')
+  // Event listener for each dropdown button
+  dropdownBtnList.forEach((btn, index) => {
+    btn.addEventListener('click', function (event) {
+      event.stopPropagation()
+
+      // Get the corresponding list dropdown element
+      const dropdown = dropdownList[index]
+
+      // Toggle the visibility of the clicked dropdown
+      dropdown.classList.toggle('show')
+
+      // Close any other open dropdowns except the clicked one
+      dropdownList.forEach((dropdownItem, idx) => {
+        if (idx !== index && dropdownItem.classList.contains('show')) {
+          dropdownItem.classList.remove('show')
+        }
+      })
+    })
   })
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function (event) {
+    const isDropdownClick = Array.from(dropdownBtnList).some(btn =>
+      btn.contains(event.target)
+    )
+
+    if (!isDropdownClick) {
+      closeAllDropdowns()
+    }
+  })
+
+  // Function to close all dropdowns
+  function closeAllDropdowns() {
+    dropdownList.forEach(dropdown => {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show')
+      }
+    })
+  }
 })
