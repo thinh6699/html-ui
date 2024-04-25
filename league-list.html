@@ -14,6 +14,30 @@
     <!-- Main -->
     <main class="flex flex-col overflow-auto h-[calc(100vh-48px)]">
       <section class="container sticky top-0 z-[9999] bg-white py-4 mb-3">
+        <!-- dropdown -->
+        <button
+          type="button"
+          class="dropdown-btn input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
+        >
+          <p>Today</p>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.9333 6.81665H9.74164H5.06664C4.26664 6.81665 3.86664 7.78332 4.43331 8.34998L8.74997 12.6667C9.44164 13.3583 10.5666 13.3583 11.2583 12.6667L12.9 11.025L15.575 8.34998C16.1333 7.78332 15.7333 6.81665 14.9333 6.81665Z"
+              fill="#ABB3BF"
+            />
+          </svg>
+          <div class="list-dropdown shadow">
+            <div class="dropdown-item selected">Today</div>
+            <div class="dropdown-item">Tomorrow</div>
+          </div>
+        </button>
+
         <!-- Search league -->
         <div class="input-search-wrapper mb-3">
           <svg
@@ -159,5 +183,7 @@
         </div>
       </section>
     </main>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/modal.js"></script>
   </body>
 </html>

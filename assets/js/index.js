@@ -1,43 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function toggleModal(target) {
-    const modal = document.querySelector(target)
-
-    modal.classList.toggle('show')
-  }
-
-  // toggle bet info item
   const collapseBtnList = document.querySelectorAll('.collapse-btn')
+  const selectBetBtnList = document.querySelectorAll('.bet-item')
+  const dropdownBtn = document.querySelector('.dropdown-btn')
+
+  // collapse bet info item
   collapseBtnList.forEach(btn => {
     btn.addEventListener('click', function () {
       const parentElement = btn.parentElement
-      const collapseContent = parentElement.querySelector(
-        '.transition-collapse'
-      )
+      const collapseItem = parentElement.querySelector('.collapse-item')
+
       const arrow = btn.querySelector('svg')
       arrow.classList.toggle('rotate-180')
-      if (collapseContent.classList.contains('grid-template-rows-1')) {
-        collapseContent.classList.remove('grid-template-rows-1')
-        collapseContent.classList.add('grid-template-rows-0')
-      } else {
-        collapseContent.classList.remove('grid-template-rows-0')
-        collapseContent.classList.add('grid-template-rows-1')
-      }
+
+      collapseItem.classList.toggle('show')
     })
   })
 
-  // select bet
-  const selectBetBtnList = document.querySelectorAll('.bet-item')
+  // Event listener for each select bet button
   selectBetBtnList.forEach(btn => {
-    btn.addEventListener('click', function () {
-      btn.classList.toggle('bg-primary')
-      const target = btn.getAttribute('data-target')
-      const children = btn.children
-      Array.from(children).forEach(child => {
-        child.classList.toggle('!text-white')
-      })
+    btn.addEventListener('click', function (event) {
+      event.stopPropagation() // Stop propagation to prevent hiding modal
+      btn.classList.add('selected')
 
-      // show modal confirm
-      toggleModal(target)
+      // Show modal confirm associated with the button
+      const target = btn.getAttribute('data-target')
+      const modal = document.querySelector(target)
+      modal.classList.add('show')
     })
+  })
+
+  dropdownBtn?.addEventListener('click', function () {
+    const listDropdown = dropdownBtn.querySelector('.list-dropdown')
+    listDropdown.classList.toggle('show')
   })
 })

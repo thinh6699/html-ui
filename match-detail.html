@@ -28,15 +28,15 @@
 
     <main class="flex flex-col overflow-auto h-[calc(100vh-48px)]">
       <section
-        class="relative bg-match-detail bg-no-repeat bg-cover bg-center pt-[38%] mb-4"
+        class="relative bg-match-detail bg-no-repeat bg-cover bg-center pt-[43%] mb-4"
       >
         <div
           class="bg-gradient-to-r from-green-rgba to-black-rgba-03 absolute top-0 left-0 right-0 bottom-0"
         ></div>
         <div class="absolute top-0 left-0 right-0 bottom-0">
-          <div class="px-4 py-8 h-full text-white flex flex-col">
+          <div class="px-4 py-6 h-full text-white flex flex-col">
             <p class="font-semibold mb-1">AFC - Champion League</p>
-            <div class="flex items-center gap-1 text-neutral-300 mb-4">
+            <div class="flex items-center gap-1 text-neutral-300">
               <svg
                 width="16"
                 height="16"
@@ -49,56 +49,81 @@
                   fill="#D4D9DF"
                 />
               </svg>
-              <p class="text-xs font-semibold">22/06, 17:00:00 (GMP +07:00)</p>
+              <div class="flex items-center gap-1">
+                <p class="text-xs font-semibold">
+                  22/06, 17:00:00 (GMP +07:00)
+                </p>
+                <!-- Match live add icon -->
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_94_1256)">
+                    <path
+                      d="M2.61932 3.28601L3.56199 4.22868C2.59666 5.19401 1.99999 6.52734 1.99999 8.00001C1.99999 9.47334 2.59666 10.8067 3.56199 11.7713L2.61999 12.7133C1.41266 11.5073 0.666656 9.84068 0.666656 8.00001C0.666656 6.15934 1.41332 4.49268 2.61932 3.28601ZM13.3807 3.28601C14.5873 4.49268 15.3333 6.15934 15.3333 8.00001C15.3333 9.84068 14.5867 11.508 13.3807 12.714L12.438 11.7713C13.4033 10.806 14 9.47268 14 8.00001C14 6.52734 13.4033 5.19468 12.4387 4.22934L13.38 3.28668L13.3807 3.28601ZM8.66666 3.33334V7.33334H10.6667L7.33332 12.6667V8.66668H5.33332L8.66666 3.33334ZM4.50466 5.17134L5.44799 6.11468C4.96532 6.59668 4.66666 7.26334 4.66666 8.00001C4.66666 8.73668 4.96532 9.40334 5.44799 9.88534L4.50466 10.8287C3.78132 10.1047 3.33332 9.10468 3.33332 8.00001C3.33332 6.89534 3.78132 5.89534 4.50466 5.17134ZM11.496 5.17201C12.2193 5.89601 12.6667 6.89601 12.6667 8.00001C12.6667 9.10468 12.2187 10.1047 11.4953 10.8287L10.552 9.88534C11.0347 9.40334 11.3333 8.73668 11.3333 8.00001C11.3333 7.26401 11.0353 6.59734 10.5533 6.11534L11.496 5.17201Z"
+                      fill="#FF4669"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_94_1256">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
             </div>
-            <div class="flex-center gap-1 font-semibold flex-grow">
+
+            <!-- Match upcoming -->
+            <!-- <div class="flex-center gap-2 font-semibold flex-grow mt-4">
               <span class="flex-grow text-center">Yokohama F Marios</span>
               <span class="text-success font-bold">vs</span>
               <span class="flex-grow text-center">Ulsan Hyundai FC</span>
+            </div> -->
+
+            <!-- Match live -->
+            <div class="flex-center gap-2 font-semibold flex-grow mt-2">
+              <div class="flex flex-col gap-[2px] flex-grow">
+                <div class="w-8 h-8">
+                  <img src="./assets/images/team-1.png" alt="" class="w-full" />
+                </div>
+                <p class="text-xs">Yokohama F Marios</p>
+                <div class="flex items-center gap-2">
+                  <div class="card yellow"></div>
+                  <div class="card red"></div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-[2px] text-center">
+                <p class="text-success text-xs">42’ Hiệp 2</p>
+                <div class="flex items-center gap-[2px]">
+                  <div class="score detail flex-grow">6</div>
+                  <span class="flex-grow">:</span>
+                  <div class="score detail flex-grow">1</div>
+                </div>
+                <p class="text-[10px] text-neutral-300 font-normal">
+                  Hiệp 1 3:0
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-[2px] flex-grow items-end">
+                <div class="w-8 h-8">
+                  <img src="./assets/images/team-2.png" alt="" class="w-full" />
+                </div>
+                <p class="text-xs">Ulsan Hyundai FC</p>
+                <div class="flex items-center gap-2">
+                  <div class="card yellow"></div>
+                  <div class="card red"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="container bg-white py-3 px-4 mb-4">
-        <button
-          type="button"
-          class="collapse-btn flex items-center justify-between w-full gap-3"
-        >
-          <p class="font-bold text-neutral-700">Toàn trận</p>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
-          </svg>
-        </button>
-        <div class="grid transition-collapse grid-template-rows-1">
-          <div class="grid grid-cols-2 gap-2 overflow-hidden">
-            <button
-              type="button"
-              data-target=".modal-confirm-bet"
-              class="bet-item"
-            >
-              <p class="text-neutral-500">over 2.5</p>
-              <p class="text-primary font-bold">8.60</p>
-            </button>
-            <button
-              type="button"
-              data-target=".modal-confirm-bet"
-              class="bet-item"
-            >
-              <p class="text-neutral-500">over 2.5</p>
-              <p class="text-primary font-bold">8.60</p>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="container bg-white py-3 px-4">
+      <section class="container bg-white py-3 px-4 mb-3">
         <button
           type="button"
           class="collapse-btn flex items-center justify-between w-full gap-3"
@@ -114,59 +139,186 @@
             <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
           </svg>
         </button>
-        <div class="grid transition-collapse grid-template-rows-1">
+        <div class="grid collapse-item show">
           <div class="flex flex-col gap-2 overflow-hidden">
             <div class="flex-center gap-3 text-neutral-600 font-semibold">
               <span class="text-center flex-grow my-3">Yokohama F Marios</span>
               <span class="text-center flex-grow my-3">Ulsan Hyundai FC</span>
             </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                data-target=".modal-confirm-bet"
-                class="bet-item !mt-0"
-              >
-                <p class="text-neutral-500">(-2.75)</p>
-                <p class="text-primary font-bold">8.60</p>
-              </button>
-              <button
-                type="button"
-                data-target=".modal-confirm-bet"
-                class="bet-item !mt-0"
-              >
-                <p class="text-neutral-500">(+2.75)</p>
-                <p class="text-primary font-bold">8.60</p>
-              </button>
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col gap-2">
+                <p
+                  class="p-2 bg-green-light rounded font-bold text-center text-neutral-700"
+                >
+                  Toàn trận
+                </p>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(-2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(+2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p
+                  class="p-2 bg-green-light rounded font-bold text-center text-neutral-700"
+                >
+                  Hiệp 1
+                </p>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(-2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(+2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container bg-white py-3 px-4">
+        <button
+          type="button"
+          class="collapse-btn flex items-center justify-between w-full gap-3"
+        >
+          <p class="font-bold text-neutral-700">Tài xỉu</p>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
+          </svg>
+        </button>
+        <div class="grid collapse-item show">
+          <div class="flex flex-col gap-2 overflow-hidden">
+            <div class="flex-center gap-3 text-neutral-600 font-semibold">
+              <span class="text-center flex-grow my-3">Yokohama F Marios</span>
+              <span class="text-center flex-grow my-3">Ulsan Hyundai FC</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col gap-2">
+                <p
+                  class="p-2 bg-green-light rounded font-bold text-center text-neutral-700"
+                >
+                  Toàn trận
+                </p>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(-2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(+2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p
+                  class="p-2 bg-green-light rounded font-bold text-center text-neutral-700"
+                >
+                  Hiệp 1
+                </p>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(-2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                  <button
+                    type="button"
+                    data-target="#modal-confirm-bet"
+                    class="bet-item !mt-0"
+                  >
+                    <p class="text-neutral-500">(+2.75)</p>
+                    <p class="text-primary font-bold">8.60</p>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <script src="./assets//js/index.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/modal.js"></script>
   </body>
 
   <!-- Modal -->
-  <div class="modal modal-confirm-bet flex flex-col border-t-2 border-primary">
-    <div class="px-4 py-3">
-      <p class="text-neutral-700 mb-1">Yokohama F Marios x Ulsan Hyundai FC</p>
-      <p class="text-neutral-600 text-xs mb-1">Handicap</p>
-      <div class="flex items-center justify-between gap-2 leading-[18px]">
-        <p class="font-bold text-neutral-700">(-2.75) Yokohama F Marios</p>
-        <p class="font-bold text-functional-red">-0.60</p>
-      </div>
-    </div>
-    <div class="seperate h-[1px] w-full bg-neutral-100"></div>
-    <div class="p-4">
-      <div class="flex items-center gap-4 font-bold">
-        <button
-          class="btn bg-neutral-100 h-10 w-[120px] text-neutral-600"
-          type="button"
-        >
-          Hủy
-        </button>
-        <button class="btn bg-primary h-10 flex-grow text-white" type="button">
-          Xác nhận đặt kèo
-        </button>
+  <div
+    id="modal-confirm-bet"
+    class="modal flex flex-col w-full h-[calc(100vh-48px)]"
+  >
+    <div class="flex-grow flex flex-col justify-end">
+      <!-- Modal content -->
+      <div class="modal-content border-t-2 border-primary bg-white">
+        <div class="px-4 py-3">
+          <p class="text-neutral-700 mb-1">
+            Yokohama F Marios x Ulsan Hyundai FC
+          </p>
+          <p class="text-neutral-600 text-xs mb-1">Handicap</p>
+          <div class="flex items-center justify-between gap-2 leading-[18px]">
+            <p class="font-bold text-neutral-700">(-2.75) Yokohama F Marios</p>
+            <p class="text-primary font-bold">8.60</p>
+            <!-- <p class="font-bold text-functional-red-1">-0.60</p> -->
+          </div>
+        </div>
+        <div class="seperate h-[1px] w-full bg-neutral-100"></div>
+        <div class="p-4">
+          <div class="flex items-center gap-4 font-bold">
+            <button
+              class="btn bg-neutral-100 h-10 w-[120px] text-neutral-600 modal-close"
+              type="button"
+            >
+              Hủy
+            </button>
+            <button
+              class="btn bg-primary h-10 flex-grow text-white modal-submit"
+              type="button"
+            >
+              Xác nhận đặt kèo
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
