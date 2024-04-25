@@ -10,11 +10,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: theme('colors.neutral-50');
 }
 
 main {
   flex-grow: 1;
-  background-color: theme('colors.neutral-50');
 }
 
 input {
@@ -111,7 +111,7 @@ input {
     left: 0;
     bottom: -100%; /* Start off-screen at the bottom */
     width: 100%;
-    transition: bottom 0.7s ease-in-out; /* Use a smooth transition effect */
+    transition: bottom 0.5s ease-in-out; /* Use a smooth transition effect */
   }
 
   .modal.show {
@@ -133,6 +133,11 @@ input {
 
   .list-dropdown.show {
     display: flex;
+  }
+
+  .dropdown-btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   .dropdown-item {
@@ -180,6 +185,35 @@ input {
 
   .card.red {
     background-color: theme('colors.functional-red-1');
+  }
+
+  .badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  .badge.active {
+    color: theme('colors.functional-yellow');
+    background-color: theme('colors.functional-yellow-rbga-01');
+  }
+
+  .badge.completed {
+    color: theme('colors.success');
+    background-color: theme('colors.green-light');
+  }
+
+  .bet-detail {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: theme('colors.green-light');
+  }
+
+  .container-no-padding {
+    @apply container;
+    padding: 0;
   }
 }
 

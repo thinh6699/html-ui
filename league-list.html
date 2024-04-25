@@ -8,19 +8,20 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="sticky top-0 z-[9999]">
+    <header class="container sticky top-0 z-[9999]">
       <p class="text-center font-bold">Danh sách giải đấu</p>
     </header>
     <!-- Main -->
-    <main class="flex flex-col overflow-auto h-[calc(100vh-48px)]">
-      <section class="container sticky top-0 z-[9999] bg-white py-4 mb-3">
+    <main class="flex flex-col">
+      <section class="container bg-white py-4 mb-3">
         <!-- dropdown -->
         <button
           type="button"
           class="dropdown-btn input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
         >
-          <p>Today</p>
+          <p class="truncate">Today</p>
           <svg
+            class="flex-shrink-0"
             width="20"
             height="20"
             viewBox="0 0 20 20"

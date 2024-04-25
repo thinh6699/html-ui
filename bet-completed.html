@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh sách trận đấu</title>
+    <title>Lịch sử cược</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="container sticky top-0 z-[9999]">
-      <a href="./league-list.html" class="absolute">
+      <a href="javascript:void(0)" class="absolute">
         <svg
           width="24"
           height="24"
@@ -25,35 +25,63 @@
       </a>
       <p class="text-center font-bold">Danh sách trận đấu</p>
     </header>
+
     <!-- Main -->
     <main class="flex flex-col">
-      <section class="container bg-white py-4 mb-3">
-        <!-- dropdown -->
-        <button
-          type="button"
-          class="dropdown-btn input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
-        >
-          <p class="truncate">Today</p>
-          <svg
-            class="flex-shrink-0"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <section class="container bg-white py-4">
+        <div class="grid grid-cols-2 gap-3">
+          <!-- dropdown -->
+          <button
+            type="button"
+            class="dropdown-btn input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
           >
-            <path
-              d="M14.9333 6.81665H9.74164H5.06664C4.26664 6.81665 3.86664 7.78332 4.43331 8.34998L8.74997 12.6667C9.44164 13.3583 10.5666 13.3583 11.2583 12.6667L12.9 11.025L15.575 8.34998C16.1333 7.78332 15.7333 6.81665 14.9333 6.81665Z"
-              fill="#ABB3BF"
-            />
-          </svg>
-          <div class="list-dropdown shadow">
-            <div class="dropdown-item selected">Today</div>
-            <div class="dropdown-item">Tomorrow</div>
-          </div>
-        </button>
+            <p class="truncate">Cược đã kết thúc</p>
+            <svg
+              class="flex-shrink-0"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.9333 6.81665H9.74164H5.06664C4.26664 6.81665 3.86664 7.78332 4.43331 8.34998L8.74997 12.6667C9.44164 13.3583 10.5666 13.3583 11.2583 12.6667L12.9 11.025L15.575 8.34998C16.1333 7.78332 15.7333 6.81665 14.9333 6.81665Z"
+                fill="#ABB3BF"
+              />
+            </svg>
+            <div class="list-dropdown shadow">
+              <div class="dropdown-item selected">Today</div>
+              <div class="dropdown-item">Tomorrow</div>
+            </div>
+          </button>
 
-        <!-- Search match -->
+          <!-- dropdown -->
+          <button
+            type="button"
+            class="dropdown-btn disabled input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
+          >
+            <p class="truncate">Hôm nay</p>
+            <svg
+              class="flex-shrink-0"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.9333 6.81665H9.74164H5.06664C4.26664 6.81665 3.86664 7.78332 4.43331 8.34998L8.74997 12.6667C9.44164 13.3583 10.5666 13.3583 11.2583 12.6667L12.9 11.025L15.575 8.34998C16.1333 7.78332 15.7333 6.81665 14.9333 6.81665Z"
+                fill="#ABB3BF"
+              />
+            </svg>
+            <div class="list-dropdown shadow">
+              <div class="dropdown-item selected">Today</div>
+              <div class="dropdown-item">Tomorrow</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Search league -->
         <div class="input-search-wrapper mb-3">
           <svg
             width="20"
@@ -67,13 +95,39 @@
               fill="#10C285"
             />
           </svg>
-          <input class="w-full" placeholder="Nhập tên giải đấu hoặc trận đấu" />
+          <input
+            class="w-full"
+            placeholder="Nhập ID lượt cược hoặc tên đội bóng"
+          />
         </div>
 
         <!-- Search by date -->
         <div class="input-search-wrapper gap-3 mb-3">
           <div class="flex items-center gap-3 flex-grow">
             <span>01/01/2024</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.62 3.95331L13.6667 7.99998L9.62 12.0466"
+                stroke="#ABB3BF"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.33337 8H13.5534"
+                stroke="#ABB3BF"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>12/03/2024</span>
           </div>
 
           <svg
@@ -141,22 +195,22 @@
         </div>
       </section>
 
-      <section class="container bg-white py-4">
-        <div class="flex flex-col gap-4">
-          <p class="text-base font-bold text-primary">AFC - Champion League</p>
-          <div class="flex flex-col gap-3">
-            <!-- Live match -->
-            <a class="match-item" href="./match-detail.html">
-              <div class="match-schedule text-center">
-                <p class="text-xs text-gray font-bold">Today</p>
-                <p class="text-primary font-bold">00:30</p>
-                <p class="text-[10px] text-neutral-600 leading-[18px]">
-                  (+7:00)
+      <p class="container py-3 text-neutral-600 text-xs">
+        * Bạn chỉ có thể xem dữ liệu trong vòng 30 ngày
+      </p>
+
+      <section class="bg-white container-no-padding mb-2">
+        <div class="border-b border-neutral-50 py-2">
+          <div class="container">
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex flex-col">
+                <p class="text-xs font-semibold text-neutral-700">
+                  # 2799056529
                 </p>
-              </div>
-              <div class="w-px bg-neutral-200 min-h-[54px]"></div>
-              <div class="flex flex-col gap-1 flex-grow overflow-hidden">
-                <div class="flex items-center gap-1">
+                <div class="flex items-center gap-[6px] text-[10px] leading-4">
+                  <p class="text-neutral-600">Bóng đá</p>
+                  <div class="w-px bg-neutral-200 min-h-[15px]"></div>
+                  <p class="text-neutral-500">22/06, 17:00:00 (+07:00)</p>
                   <svg
                     width="16"
                     height="16"
@@ -164,66 +218,115 @@
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_94_491)">
+                    <g clip-path="url(#clip0_94_242)">
                       <path
-                        d="M2.61929 3.28601L3.56196 4.22868C2.59663 5.19401 1.99996 6.52734 1.99996 8.00001C1.99996 9.47334 2.59663 10.8067 3.56196 11.7713L2.61996 12.7133C1.41263 11.5073 0.666626 9.84068 0.666626 8.00001C0.666626 6.15934 1.41329 4.49268 2.61929 3.28601ZM13.3806 3.28601C14.5873 4.49268 15.3333 6.15934 15.3333 8.00001C15.3333 9.84068 14.5866 11.508 13.3806 12.714L12.438 11.7713C13.4033 10.806 14 9.47268 14 8.00001C14 6.52734 13.4033 5.19468 12.4386 4.22934L13.38 3.28668L13.3806 3.28601ZM8.66663 3.33334V7.33334H10.6666L7.33329 12.6667V8.66668H5.33329L8.66663 3.33334ZM4.50463 5.17134L5.44796 6.11468C4.96529 6.59668 4.66663 7.26334 4.66663 8.00001C4.66663 8.73668 4.96529 9.40334 5.44796 9.88534L4.50463 10.8287C3.78129 10.1047 3.33329 9.10468 3.33329 8.00001C3.33329 6.89534 3.78129 5.89534 4.50463 5.17134ZM11.496 5.17201C12.2193 5.89601 12.6666 6.89601 12.6666 8.00001C12.6666 9.10468 12.2186 10.1047 11.4953 10.8287L10.552 9.88534C11.0346 9.40334 11.3333 8.73668 11.3333 8.00001C11.3333 7.26401 11.0353 6.59734 10.5533 6.11534L11.496 5.17201Z"
+                        d="M2.61935 3.28601L3.56202 4.22868C2.59669 5.19401 2.00002 6.52734 2.00002 8.00001C2.00002 9.47334 2.59669 10.8067 3.56202 11.7713L2.62002 12.7133C1.41269 11.5073 0.666687 9.84068 0.666687 8.00001C0.666687 6.15934 1.41335 4.49268 2.61935 3.28601ZM13.3807 3.28601C14.5874 4.49268 15.3334 6.15934 15.3334 8.00001C15.3334 9.84068 14.5867 11.508 13.3807 12.714L12.438 11.7713C13.4034 10.806 14 9.47268 14 8.00001C14 6.52734 13.4034 5.19468 12.4387 4.22934L13.38 3.28668L13.3807 3.28601ZM8.66669 3.33334V7.33334H10.6667L7.33335 12.6667V8.66668H5.33335L8.66669 3.33334ZM4.50469 5.17134L5.44802 6.11468C4.96535 6.59668 4.66669 7.26334 4.66669 8.00001C4.66669 8.73668 4.96535 9.40334 5.44802 9.88534L4.50469 10.8287C3.78135 10.1047 3.33335 9.10468 3.33335 8.00001C3.33335 6.89534 3.78135 5.89534 4.50469 5.17134ZM11.496 5.17201C12.2194 5.89601 12.6667 6.89601 12.6667 8.00001C12.6667 9.10468 12.2187 10.1047 11.4954 10.8287L10.552 9.88534C11.0347 9.40334 11.3334 8.73668 11.3334 8.00001C11.3334 7.26401 11.0354 6.59734 10.5534 6.11534L11.496 5.17201Z"
                         fill="#FF4669"
                       />
                     </g>
                     <defs>
-                      <clipPath id="clip0_94_491">
+                      <clipPath id="clip0_94_242">
                         <rect width="16" height="16" fill="white" />
                       </clipPath>
                     </defs>
                   </svg>
-                  <p class="text-primary text-xs font-semibold">42’ Hiệp 2</p>
-                </div>
-                <div
-                  class="flex flex-col gap-1 font-bold text-neutral-700 leading-[18px]"
-                >
-                  <div class="flex items-center gap-2 justify-between">
-                    <div class="flex items-center gap-[10px] overflow-hidden">
-                      <p class="truncate">Juventus</p>
-                      <div class="flex items-center gap-1">
-                        <div class="card yellow"></div>
-                        <div class="card red"></div>
-                      </div>
-                    </div>
-                    <div class="score">6</div>
-                  </div>
-                  <div class="flex items-center gap-2 justify-between">
-                    <div class="flex items-center gap-[10px]">
-                      <p class="truncate">Bologna FC</p>
-                      <div class="flex items-center gap-1">
-                        <div class="card yellow"></div>
-                        <div class="card red"></div>
-                      </div>
-                    </div>
-                    <div class="score">0</div>
-                  </div>
                 </div>
               </div>
-            </a>
+              <div class="badge completed">Đã xử lý</div>
+            </div>
+          </div>
+        </div>
 
-            <!-- Upcoming match -->
-            <a class="match-item" href="./match-detail.html">
-              <div class="match-schedule text-center">
-                <p class="text-xs text-gray font-bold">Today</p>
-                <p class="text-primary font-bold">00:30</p>
-                <p class="text-[10px] text-neutral-600 leading-[18px]">
-                  (+7:00)
-                </p>
+        <div class="border-b border-neutral-50 py-3">
+          <div class="container">
+            <div class="flex flex-col mb-2">
+              <p class="text-neutral-700 font-semibold">
+                AFC - Champion League
+              </p>
+              <p class="text-neutral-700">
+                Yokohama F Marios x Ulsan Hyundai FC
+              </p>
+              <p class="text-neutral-400 text-xs font-semibold">
+                22/06, 17:00:00 (GMP +07:00)
+              </p>
+            </div>
+            <div class="bet-detail flex flex-col gap-1">
+              <p class="text-xs text-neutral-600">Cược Handicap</p>
+              <div
+                class="flex items-center justify-between gap-3 text-xs font-semibold text-primary"
+              >
+                <p class="truncate">(-2.75) Yokohama F Marios</p>
+                <p>8.60</p>
               </div>
-              <div class="w-px bg-neutral-200 min-h-[54px]"></div>
-              <div class="flex flex-col gap-1 flex-grow overflow-hidden">
+            </div>
+          </div>
+        </div>
+
+        <div class="py-2">
+          <div class="container">
+            <button
+              type="button"
+              class="collapse-btn flex items-center w-full gap-1"
+            >
+              <p class="font-bold text-neutral-700 text-xs">Chi tiết</p>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
+              </svg>
+            </button>
+            <div class="grid collapse-item show">
+              <div class="flex flex-col gap-1 overflow-hidden">
                 <div
-                  class="flex flex-col gap-2 font-bold text-neutral-700 leading-[18px] overflow-hidden"
+                  class="flex items-center justify-between gap-3 text-neutral-700"
                 >
-                  <span class="truncate">Juventus</span>
-                  <span class="truncate">Bologna FC</span>
+                  <p class="text-xs">Tiền đặt cược (MYR)</p>
+                  <p class="font-semibold">5.00</p>
+                </div>
+                <div
+                  class="flex items-center justify-between gap-3 text-neutral-700"
+                >
+                  <p class="text-xs">Tiềm năng thắng</p>
+                  <p class="font-semibold">2.05</p>
+                </div>
+
+                <!-- Type 1 -->
+                <!-- <div
+                  class="flex items-center justify-between gap-3 bg-neutral-50 rounded py-1 px-2"
+                >
+                  <p class="text-xs text-neutral-500">Khi cược</p>
+                  <p class="font-bold text-neutral-700">2-0</p>
+                </div> -->
+
+                <div class="grid grid-cols-2 gap-2 mb-1">
+                  <div
+                    class="flex items-center justify-between gap-3 bg-neutral-50 rounded py-1 px-2"
+                  >
+                    <p class="text-xs text-neutral-500">Nửa đầu trận</p>
+                    <p class="font-bold text-neutral-700">2-0</p>
+                  </div>
+                  <div
+                    class="flex items-center justify-between gap-3 bg-neutral-50 rounded py-1 px-2"
+                  >
+                    <p class="text-xs text-neutral-500">Chung cuộc</p>
+                    <p class="font-bold text-neutral-700">2-0</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-xs text-neutral-700">Thắng/Thua</p>
+                  <p class="font-semibold text-primary">5.05</p>
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-xs text-neutral-700">Hoa hồng</p>
+                  <p class="font-semibold text-primary">0.00</p>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="sticky top-0 z-[9999]">
+    <header class="container sticky top-0 z-[9999]">
       <a href="./match-list.html" class="absolute">
         <svg
           width="24"
@@ -26,9 +26,9 @@
       <p class="text-center font-bold">Thông tin trận đấu</p>
     </header>
 
-    <main class="flex flex-col overflow-auto h-[calc(100vh-48px)]">
+    <main class="flex flex-col">
       <section
-        class="relative bg-match-detail bg-no-repeat bg-cover bg-center pt-[43%] mb-4"
+        class="container relative bg-match-detail bg-no-repeat bg-cover bg-center pt-[43%] mb-4 pb-12"
       >
         <div
           class="bg-gradient-to-r from-green-rgba to-black-rgba-03 absolute top-0 left-0 right-0 bottom-0"
@@ -85,18 +85,24 @@
 
             <!-- Match live -->
             <div class="flex-center gap-2 font-semibold flex-grow mt-2">
-              <div class="flex flex-col gap-[2px] flex-grow">
-                <div class="w-8 h-8">
-                  <img src="./assets/images/team-1.png" alt="" class="w-full" />
-                </div>
-                <p class="text-xs">Yokohama F Marios</p>
-                <div class="flex items-center gap-2">
-                  <div class="card yellow"></div>
-                  <div class="card red"></div>
+              <div class="flex-grow">
+                <div class="flex flex-col gap-[2px] max-w-[160px]">
+                  <div class="w-8 h-8">
+                    <img
+                      src="./assets/images/team-1.png"
+                      alt=""
+                      class="w-full"
+                    />
+                  </div>
+                  <p class="text-xs">Yokohama F Marios</p>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <div class="card yellow"></div>
+                    <div class="card red"></div>
+                  </div>
                 </div>
               </div>
 
-              <div class="flex flex-col gap-[2px] text-center">
+              <div class="flex flex-col gap-[2px] text-center flex-shrink-0">
                 <p class="text-success text-xs">42’ Hiệp 2</p>
                 <div class="flex items-center gap-[2px]">
                   <div class="score detail flex-grow">6</div>
@@ -108,14 +114,20 @@
                 </p>
               </div>
 
-              <div class="flex flex-col gap-[2px] flex-grow items-end">
-                <div class="w-8 h-8">
-                  <img src="./assets/images/team-2.png" alt="" class="w-full" />
-                </div>
-                <p class="text-xs">Ulsan Hyundai FC</p>
-                <div class="flex items-center gap-2">
-                  <div class="card yellow"></div>
-                  <div class="card red"></div>
+              <div class="flex-grow flex flex-col items-end">
+                <div class="flex flex-col gap-[2px] items-end max-w-[160px]">
+                  <div class="w-8 h-8">
+                    <img
+                      src="./assets/images/team-2.png"
+                      alt=""
+                      class="w-full"
+                    />
+                  </div>
+                  <p class="text-xs text-right">Ulsan Hyundai FC</p>
+                  <div class="flex items-center gap-2 flex-wrap justify-end">
+                    <div class="card yellow"></div>
+                    <div class="card red"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -284,39 +296,40 @@
   </body>
 
   <!-- Modal -->
-  <div
-    id="modal-confirm-bet"
-    class="modal flex flex-col w-full h-[calc(100vh-48px)]"
-  >
+  <div id="modal-confirm-bet" class="modal flex flex-col h-[calc(100vh-48px)]">
     <div class="flex-grow flex flex-col justify-end">
-      <!-- Modal content -->
-      <div class="modal-content border-t-2 border-primary bg-white">
-        <div class="px-4 py-3">
-          <p class="text-neutral-700 mb-1">
-            Yokohama F Marios x Ulsan Hyundai FC
-          </p>
-          <p class="text-neutral-600 text-xs mb-1">Handicap</p>
-          <div class="flex items-center justify-between gap-2 leading-[18px]">
-            <p class="font-bold text-neutral-700">(-2.75) Yokohama F Marios</p>
-            <p class="text-primary font-bold">8.60</p>
-            <!-- <p class="font-bold text-functional-red-1">-0.60</p> -->
+      <div class="modal-content">
+        <!-- Modal content -->
+        <div class="container border-t-2 border-primary bg-white">
+          <div class="px-4 py-3">
+            <p class="text-neutral-700 mb-1">
+              Yokohama F Marios x Ulsan Hyundai FC
+            </p>
+            <p class="text-neutral-600 text-xs mb-1">Handicap</p>
+            <div class="flex items-center justify-between gap-2 leading-[18px]">
+              <p class="font-bold text-neutral-700">
+                (-2.75) Yokohama F Marios
+              </p>
+              <p class="text-primary font-bold">8.60</p>
+              <!-- <p class="font-bold text-functional-red-1">-0.60</p> -->
+            </div>
           </div>
-        </div>
-        <div class="seperate h-[1px] w-full bg-neutral-100"></div>
-        <div class="p-4">
-          <div class="flex items-center gap-4 font-bold">
-            <button
-              class="btn bg-neutral-100 h-10 w-[120px] text-neutral-600 modal-close"
-              type="button"
-            >
-              Hủy
-            </button>
-            <button
-              class="btn bg-primary h-10 flex-grow text-white modal-submit"
-              type="button"
-            >
-              Xác nhận đặt kèo
-            </button>
+          <div class="seperate h-[1px] w-full bg-neutral-100"></div>
+          <div class="p-4">
+            <div class="flex items-center gap-4 font-bold">
+              <button
+                class="btn bg-neutral-100 h-10 w-[120px] text-neutral-600 modal-close"
+                type="button"
+              >
+                Hủy
+              </button>
+              <button
+                class="btn bg-primary h-10 flex-grow text-white modal-submit"
+                type="button"
+              >
+                Xác nhận đặt kèo
+              </button>
+            </div>
           </div>
         </div>
       </div>
