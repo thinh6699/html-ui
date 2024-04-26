@@ -22,6 +22,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script src="./assets/js/theme.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -71,13 +72,15 @@
 
     <!-- Main -->
     <main class="flex flex-col">
-      <section class="container bg-white py-4 mb-3">
+      <section
+        class="container bg-section-bg dark:bg-dark-section-bg py-4 mb-3"
+      >
         <!-- dropdown -->
         <button
           type="button"
           class="dropdown-btn input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
         >
-          <p class="truncate">Today</p>
+          <p class="truncate dark:text-dark-neutral-800">Today</p>
           <svg
             class="flex-shrink-0"
             width="20"
@@ -117,7 +120,7 @@
         <!-- Search by date -->
         <div class="input-search-wrapper gap-3 mb-3 date-picker">
           <div class="flex items-center gap-3 flex-grow">
-            <span>01/01/2024</span>
+            <span class="dark:text-dark-neutral-700">01/01/2024</span>
             <svg
               width="16"
               height="16"
@@ -140,7 +143,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <span>12/03/2024</span>
+            <span class="dark:text-dark-neutral-700">12/03/2024</span>
           </div>
 
           <svg
@@ -168,7 +171,7 @@
 
         <div class="flex items-center justify-between gap-4">
           <button
-            class="flex-center bg-primary rounded gap-2 flex-grow py-[10px] px-4 text-white"
+            class="flex-center bg-primary dark:bg-dark-primary rounded gap-2 flex-grow py-[10px] px-4 text-white"
           >
             <svg
               width="16"
@@ -184,8 +187,11 @@
             </svg>
             <span class="font-bold">Tìm kiếm</span>
           </button>
-          <button class="h-10 w-10 bg-neutral-100 rounded flex-center">
+          <button
+            class="h-10 w-10 bg-neutral-100 dark:bg-dark-neutral-100 rounded flex-center"
+          >
             <svg
+              class="flex dark:hidden"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -204,17 +210,31 @@
                 </clipPath>
               </defs>
             </svg>
+            <svg
+              class="hidden dark:block"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.64204 2.95538C4.85175 1.90715 6.39937 1.33115 8.00004 1.33338C11.682 1.33338 14.6667 4.31805 14.6667 8.00005C14.6667 9.42405 14.22 10.744 13.46 11.8267L11.3334 8.00005H13.3334C13.3335 6.95446 13.0262 5.93192 12.4498 5.05955C11.8734 4.18719 11.0533 3.50349 10.0915 3.09346C9.12966 2.68344 8.06852 2.56518 7.04001 2.75339C6.01151 2.9416 5.06101 3.42798 4.30671 4.15205L3.64204 2.95538ZM12.358 13.0447C11.1483 14.0929 9.60072 14.6689 8.00004 14.6667C4.31804 14.6667 1.33337 11.682 1.33337 8.00005C1.33337 6.57605 1.78004 5.25605 2.54004 4.17338L4.66671 8.00005H2.66671C2.66662 9.04563 2.97388 10.0682 3.55027 10.9405C4.12665 11.8129 4.94675 12.4966 5.90859 12.9066C6.87042 13.3167 7.93156 13.4349 8.96007 13.2467C9.98857 13.0585 10.9391 12.5721 11.6934 11.848L12.358 13.0447Z"
+                fill="#E2E4EB"
+              />
+            </svg>
           </button>
         </div>
       </section>
 
-      <section class="container bg-white py-4">
+      <section class="container bg-section-bg dark:bg-dark-section-bg py-4">
         <div class="flex flex-col gap-6">
           <div class="flex flex-col gap-4">
-            <p class="font-bold text-primary">A</p>
+            <p class="font-bold text-primary dark:text-dark-primary">A</p>
             <div class="flex flex-col gap-1">
               <a href="./match-list.html" class="league-item">
-                <span class="text-neutral-800 font-semibold truncate"
+                <span
+                  class="text-neutral-800 dark:text-dark-neutral-800 font-semibold truncate"
                   >AFC - Champion League</span
                 >
                 <svg

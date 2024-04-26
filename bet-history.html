@@ -9,6 +9,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
     ></script>
+    <script src="./assets/js/theme.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -28,17 +29,57 @@
         </svg>
       </a>
       <p class="text-center font-bold">Danh sách trận đấu</p>
+      <!-- Switch mode -->
+      <label class="switch">
+        <span class="sun">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 6C3.5 5.50555 3.64662 5.0222 3.92133 4.61107C4.19603 4.19995 4.58648 3.87952 5.04329 3.6903C5.50011 3.50108 6.00277 3.45157 6.48773 3.54804C6.97268 3.6445 7.41814 3.8826 7.76777 4.23223C8.1174 4.58186 8.3555 5.02732 8.45196 5.51227C8.54843 5.99723 8.49892 6.49989 8.3097 6.95671C8.12048 7.41352 7.80005 7.80397 7.38893 8.07867C6.9778 8.35338 6.49445 8.5 6 8.5C5.33696 8.5 4.70107 8.23661 4.23223 7.76777C3.76339 7.29893 3.5 6.66304 3.5 6ZM6 2.5C6.13261 2.5 6.25979 2.44732 6.35355 2.35355C6.44732 2.25979 6.5 2.13261 6.5 2V1.5C6.5 1.36739 6.44732 1.24021 6.35355 1.14645C6.25979 1.05268 6.13261 1 6 1C5.86739 1 5.74021 1.05268 5.64645 1.14645C5.55268 1.24021 5.5 1.36739 5.5 1.5V2C5.5 2.13261 5.55268 2.25979 5.64645 2.35355C5.74021 2.44732 5.86739 2.5 6 2.5ZM5.5 10V10.5C5.5 10.6326 5.55268 10.7598 5.64645 10.8536C5.74021 10.9473 5.86739 11 6 11C6.13261 11 6.25979 10.9473 6.35355 10.8536C6.44732 10.7598 6.5 10.6326 6.5 10.5V10C6.5 9.86739 6.44732 9.74021 6.35355 9.64645C6.25979 9.55268 6.13261 9.5 6 9.5C5.86739 9.5 5.74021 9.55268 5.64645 9.64645C5.55268 9.74021 5.5 9.86739 5.5 10ZM10.5 5.5H10C9.86739 5.5 9.74021 5.55268 9.64645 5.64645C9.55268 5.74021 9.5 5.86739 9.5 6C9.5 6.13261 9.55268 6.25979 9.64645 6.35355C9.74021 6.44732 9.86739 6.5 10 6.5H10.5C10.6326 6.5 10.7598 6.44732 10.8536 6.35355C10.9473 6.25979 11 6.13261 11 6C11 5.86739 10.9473 5.74021 10.8536 5.64645C10.7598 5.55268 10.6326 5.5 10.5 5.5ZM1.5 6.5H2C2.13261 6.5 2.25979 6.44732 2.35355 6.35355C2.44732 6.25979 2.5 6.13261 2.5 6C2.5 5.86739 2.44732 5.74021 2.35355 5.64645C2.25979 5.55268 2.13261 5.5 2 5.5H1.5C1.36739 5.5 1.24021 5.55268 1.14645 5.64645C1.05268 5.74021 1 5.86739 1 6C1 6.13261 1.05268 6.25979 1.14645 6.35355C1.24021 6.44732 1.36739 6.5 1.5 6.5ZM8.8285 3.6715C8.9611 3.67147 9.08825 3.61877 9.182 3.525L9.5355 3.1715C9.58325 3.12538 9.62135 3.0702 9.64755 3.0092C9.67375 2.9482 9.68755 2.88259 9.68813 2.8162C9.6887 2.74981 9.67605 2.68397 9.65091 2.62252C9.62577 2.56107 9.58864 2.50525 9.5417 2.4583C9.49475 2.41136 9.43892 2.37423 9.37748 2.34909C9.31603 2.32395 9.25019 2.3113 9.1838 2.31187C9.11741 2.31245 9.0518 2.32624 8.9908 2.35245C8.9298 2.37865 8.87462 2.41674 8.8285 2.4645L8.475 2.818C8.4051 2.88793 8.35749 2.97701 8.33821 3.07398C8.31892 3.17096 8.32883 3.27148 8.36666 3.36283C8.4045 3.45418 8.46857 3.53226 8.55077 3.5872C8.63298 3.64214 8.72962 3.67148 8.8285 3.6715ZM2.818 8.475L2.4645 8.8285C2.41674 8.87462 2.37865 8.9298 2.35245 8.9908C2.32624 9.0518 2.31245 9.11741 2.31187 9.1838C2.3113 9.25019 2.32395 9.31603 2.34909 9.37748C2.37423 9.43892 2.41136 9.49475 2.4583 9.5417C2.50525 9.58864 2.56107 9.62577 2.62252 9.65091C2.68397 9.67605 2.74981 9.6887 2.8162 9.68813C2.88259 9.68755 2.9482 9.67375 3.0092 9.64755C3.0702 9.62135 3.12538 9.58325 3.1715 9.5355L3.525 9.182C3.61608 9.0877 3.66648 8.9614 3.66534 8.8303C3.6642 8.6992 3.61161 8.57379 3.51891 8.48109C3.42621 8.38839 3.3008 8.3358 3.1697 8.33466C3.0386 8.33352 2.9123 8.38392 2.818 8.475ZM8.475 8.475C8.38126 8.56876 8.32861 8.69592 8.32861 8.8285C8.32861 8.96108 8.38126 9.08824 8.475 9.182L8.8285 9.5355C8.9228 9.62658 9.0491 9.67698 9.1802 9.67584C9.3113 9.6747 9.43671 9.62211 9.52941 9.52941C9.62211 9.43671 9.6747 9.3113 9.67584 9.1802C9.67698 9.0491 9.62658 8.9228 9.5355 8.8285L9.182 8.475C9.08824 8.38126 8.96108 8.32861 8.8285 8.32861C8.69592 8.32861 8.56876 8.38126 8.475 8.475ZM2.818 3.525C2.9123 3.61608 3.0386 3.66648 3.1697 3.66534C3.3008 3.6642 3.42621 3.61161 3.51891 3.51891C3.61161 3.42621 3.6642 3.3008 3.66534 3.1697C3.66648 3.0386 3.61608 2.9123 3.525 2.818L3.1715 2.4645C3.0772 2.37342 2.9509 2.32302 2.8198 2.32416C2.6887 2.3253 2.56329 2.37789 2.47059 2.47059C2.37789 2.56329 2.3253 2.6887 2.32416 2.8198C2.32302 2.9509 2.37342 3.0772 2.4645 3.1715L2.818 3.525Z"
+              fill="#FFB625"
+            />
+          </svg>
+        </span>
+        <span class="moon">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_157_2196)">
+              <path
+                d="M4.911 1.119C4.5261 1.95453 4.40651 2.88796 4.56836 3.79353C4.7302 4.69911 5.1657 5.53333 5.81619 6.18381C6.46667 6.8343 7.30089 7.2698 8.20647 7.43164C9.11204 7.59349 10.0455 7.4739 10.881 7.089C10.384 9.327 8.3875 11 6 11C3.2385 11 1 8.7615 1 6C1 3.6125 2.673 1.616 4.911 1.119ZM9.082 1.1455L9.5 1.25V1.75L9.082 1.8545C8.9062 1.89847 8.74565 1.98938 8.61751 2.11751C8.48938 2.24565 8.39847 2.4062 8.3545 2.582L8.25 3H7.75L7.6455 2.582C7.60153 2.4062 7.51062 2.24565 7.38249 2.11751C7.25435 1.98938 7.0938 1.89847 6.918 1.8545L6.5 1.75V1.25L6.918 1.1455C7.09371 1.10145 7.25415 1.01051 7.3822 0.882376C7.51024 0.754244 7.60107 0.593738 7.645 0.418L7.75 0H8.25L8.3545 0.418C8.39847 0.5938 8.48938 0.754348 8.61751 0.882486C8.74565 1.01062 8.9062 1.10153 9.082 1.1455ZM11.582 3.6455L12 3.75V4.25L11.582 4.3545C11.4062 4.39847 11.2457 4.48938 11.1175 4.61751C10.9894 4.74565 10.8985 4.9062 10.8545 5.082L10.75 5.5H10.25L10.1455 5.082C10.1015 4.9062 10.0106 4.74565 9.88249 4.61751C9.75435 4.48938 9.5938 4.39847 9.418 4.3545L9 4.25V3.75L9.418 3.6455C9.5938 3.60153 9.75435 3.51062 9.88249 3.38249C10.0106 3.25435 10.1015 3.0938 10.1455 2.918L10.25 2.5H10.75L10.8545 2.918C10.8985 3.0938 10.9894 3.25435 11.1175 3.38249C11.2457 3.51062 11.4062 3.60153 11.582 3.6455Z"
+                fill="#788393"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_157_2196">
+                <rect width="12" height="12" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </span>
+        <input type="checkbox" class="input selected-mode" />
+        <span class="slider"></span>
+      </label>
     </header>
 
     <!-- Main -->
     <main class="flex flex-col">
-      <section class="container bg-white py-4">
+      <section class="container bg-section-bg dark:bg-dark-section-bg py-4">
         <!-- dropdown -->
         <button
           type="button"
           class="dropdown-btn input-search-wrapper w-full justify-between mb-3 py-[10px] relative"
         >
-          <p class="truncate">Mã cược chờ</p>
+          <p class="truncate dark:text-dark-neutral-800">Mã cược chờ</p>
           <svg
             class="flex-shrink-0"
             width="20"
@@ -80,7 +121,7 @@
 
         <div class="flex items-center justify-between gap-4">
           <button
-            class="flex-center bg-primary rounded gap-2 flex-grow py-[10px] px-4 text-white"
+            class="flex-center bg-primary dark:bg-dark-primary rounded gap-2 flex-grow py-[10px] px-4 text-white"
           >
             <svg
               width="16"
@@ -96,8 +137,11 @@
             </svg>
             <span class="font-bold">Tìm kiếm</span>
           </button>
-          <button class="h-10 w-10 bg-neutral-100 rounded flex-center">
+          <button
+            class="h-10 w-10 bg-neutral-100 dark:bg-dark-neutral-100 rounded flex-center"
+          >
             <svg
+              class="flex dark:hidden"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -116,26 +160,53 @@
                 </clipPath>
               </defs>
             </svg>
+            <svg
+              class="hidden dark:block"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.64204 2.95538C4.85175 1.90715 6.39937 1.33115 8.00004 1.33338C11.682 1.33338 14.6667 4.31805 14.6667 8.00005C14.6667 9.42405 14.22 10.744 13.46 11.8267L11.3334 8.00005H13.3334C13.3335 6.95446 13.0262 5.93192 12.4498 5.05955C11.8734 4.18719 11.0533 3.50349 10.0915 3.09346C9.12966 2.68344 8.06852 2.56518 7.04001 2.75339C6.01151 2.9416 5.06101 3.42798 4.30671 4.15205L3.64204 2.95538ZM12.358 13.0447C11.1483 14.0929 9.60072 14.6689 8.00004 14.6667C4.31804 14.6667 1.33337 11.682 1.33337 8.00005C1.33337 6.57605 1.78004 5.25605 2.54004 4.17338L4.66671 8.00005H2.66671C2.66662 9.04563 2.97388 10.0682 3.55027 10.9405C4.12665 11.8129 4.94675 12.4966 5.90859 12.9066C6.87042 13.3167 7.93156 13.4349 8.96007 13.2467C9.98857 13.0585 10.9391 12.5721 11.6934 11.848L12.358 13.0447Z"
+                fill="#E2E4EB"
+              />
+            </svg>
           </button>
         </div>
       </section>
 
-      <p class="container py-3 text-neutral-600 text-xs">
+      <p
+        class="container py-3 text-neutral-600 dark:text-dark-neutral-600 text-xs"
+      >
         * Bạn chỉ có thể xem dữ liệu trong vòng 30 ngày
       </p>
 
-      <section class="bg-white container-no-padding mb-2">
-        <div class="border-b border-neutral-50 py-2">
+      <section
+        class="bg-section-bg dark:bg-dark-section-bg container-no-padding mb-2"
+      >
+        <div
+          class="border-b border-neutral-50 dark:border-dark-neutral-50 py-2"
+        >
           <div class="container">
             <div class="flex items-start gap-3 justify-between">
               <div class="flex flex-col">
-                <p class="text-xs font-semibold text-neutral-700">
+                <p
+                  class="text-xs font-semibold text-neutral-700 dark:text-dark-neutral-700"
+                >
                   # 2799056529
                 </p>
                 <div class="flex items-center gap-[6px] text-[10px] leading-4">
-                  <p class="text-neutral-600">Bóng đá</p>
-                  <div class="w-px bg-neutral-200 min-h-[15px]"></div>
-                  <p class="text-neutral-500">22/06, 17:00:00 (+07:00)</p>
+                  <p class="text-neutral-600 dark:text-dark-neutral-600">
+                    Bóng đá
+                  </p>
+                  <div
+                    class="w-px bg-neutral-200 dark:bg-dark-neutral-200 min-h-[15px]"
+                  ></div>
+                  <p class="text-neutral-500 dark:text-dark-neutral-500">
+                    22/06, 17:00:00 (+07:00)
+                  </p>
                   <svg
                     width="16"
                     height="16"
@@ -162,23 +233,31 @@
           </div>
         </div>
 
-        <div class="border-b border-neutral-50 py-3">
+        <div
+          class="border-b border-neutral-50 dark:border-dark-neutral-50 py-3"
+        >
           <div class="container">
             <div class="flex flex-col mb-2">
-              <p class="text-neutral-700 font-semibold">
+              <p
+                class="text-neutral-700 dark:text-dark-neutral-700 font-semibold"
+              >
                 AFC - Champion League
               </p>
-              <p class="text-neutral-700">
+              <p class="text-neutral-700 dark:text-dark-neutral-700">
                 Yokohama F Marios x Ulsan Hyundai FC
               </p>
-              <p class="text-neutral-400 text-xs font-semibold">
+              <p
+                class="text-neutral-400 dark:text-dark-neutral-400 text-xs font-semibold"
+              >
                 22/06, 17:00:00 (GMP +07:00)
               </p>
             </div>
             <div class="bet-detail flex flex-col gap-1">
-              <p class="text-xs text-neutral-600">Cược Handicap</p>
+              <p class="text-xs text-neutral-600 dark:text-dark-neutral-600">
+                Cược Handicap
+              </p>
               <div
-                class="flex items-center justify-between gap-3 text-xs font-semibold text-primary"
+                class="flex items-center justify-between gap-3 text-xs font-semibold text-primary dark:text-dark-primary"
               >
                 <p class="truncate">(-2.75) Yokohama F Marios</p>
                 <p>8.60</p>
@@ -193,7 +272,11 @@
               type="button"
               class="collapse-btn flex items-center w-full gap-1"
             >
-              <p class="font-bold text-neutral-700 text-xs">Chi tiết</p>
+              <p
+                class="font-bold text-neutral-700 dark:text-dark-neutral-700 text-xs"
+              >
+                Chi tiết
+              </p>
               <svg
                 width="24"
                 height="24"
@@ -201,28 +284,26 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M12 16L6 10H18L12 16Z" fill="#252931" />
+                <path
+                  class="dark:fill-white"
+                  d="M12 16L6 10H18L12 16Z"
+                  fill="#252931"
+                />
               </svg>
             </button>
             <div class="grid collapse-item show">
               <div class="flex flex-col gap-1 overflow-hidden">
                 <div
-                  class="flex items-center justify-between gap-3 text-neutral-700"
+                  class="flex items-center justify-between gap-3 text-neutral-700 dark:text-dark-neutral-700"
                 >
                   <p class="text-xs">Tiền đặt cược (MYR)</p>
                   <p class="font-semibold">5.00</p>
                 </div>
                 <div
-                  class="flex items-center justify-between gap-3 text-neutral-700"
+                  class="flex items-center justify-between gap-3 text-neutral-700 dark:text-dark-neutral-700"
                 >
                   <p class="text-xs">Tiềm năng thắng</p>
                   <p class="font-semibold">2.05</p>
-                </div>
-                <div
-                  class="flex items-center justify-between gap-3 bg-neutral-50 rounded py-1 px-2"
-                >
-                  <p class="text-xs text-neutral-500">Khi cược</p>
-                  <p class="font-bold text-neutral-700">2-0</p>
                 </div>
               </div>
             </div>

@@ -70,15 +70,4 @@ $(document).ready(function () {
       }
     })
   }
-
-  $('.selected-mode').on('change', function () {
-    const isChecked = $('.selected-mode').prop('checked')
-    if (isChecked) {
-      document.body.classList.add('dark-mode')
-      localStorage.setItem('dark-mode', 'true')
-    } else {
-      document.body.classList.remove('dark-mode')
-      localStorage.removeItem('dark-mode')
-    }
-  })
 })
