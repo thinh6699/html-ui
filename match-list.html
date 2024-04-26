@@ -22,7 +22,16 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
-    <script src="./assets/js/theme.js"></script>
+    <script>
+      let isDarkMode = localStorage.getItem('theme') === 'dark'
+      $('.selected-mode').prop('checked', true)
+      if (isDarkMode) {
+        $('html').addClass('dark')
+      } else {
+        $('html').addClass('light')
+        localStorage.setItem('theme', 'light')
+      }
+    </script>
   </head>
   <body>
     <!-- Header -->

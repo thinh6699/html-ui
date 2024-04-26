@@ -71,3 +71,24 @@ $(document).ready(function () {
     })
   }
 })
+
+// get local storage theme
+isDarkMode = localStorage.getItem('theme') === 'dark'
+if (isDarkMode) {
+  $('.selected-mode').prop('checked', true)
+}
+
+// watch theme change
+$(document).ready(function () {
+  $('.selected-mode').on('change', function () {
+    const isChecked = $('.selected-mode').prop('checked')
+    if (isChecked) {
+      $('html').removeClass('light')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      $('html').addClass('light')
+      localStorage.setItem('theme', 'light')
+    }
+    $('html').toggleClass('dark')
+  })
+})
