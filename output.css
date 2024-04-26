@@ -905,23 +905,39 @@ input {
   color: #fff !important;
 }
 
-.daterangepicker .today {
+/* range */
+
+.daterangepicker:not(.single) .today {
   background-color: transparent !important;
   border: 1px solid #10C285 !important;
 }
+
+.daterangepicker:not(.single) td.end-date {
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.daterangepicker:not(.single) td.start-date {
+  border-radius: 6px 0 0 6px !important;
+}
+
+/* single */
+
+.daterangepicker.single .today.start-date {
+  background-color: #10C285 !important;
+  color: #fff !important;
+}
+
+.daterangepicker.single .today:not(.start-date) {
+  background-color: transparent !important;
+  border: 1px solid #10C285 !important;
+}
+
+/* Both range and single */
 
 .daterangepicker .today.end-date:not(.start-date),
 .daterangepicker .today.start-date:not(.end-date) {
   background-color: #10C285 !important;
   color: #fff !important;
-}
-
-.daterangepicker td.end-date {
-  border-radius: 0 6px 6px 0 !important;
-}
-
-.daterangepicker td.start-date {
-  border-radius: 6px 0 0 6px !important;
 }
 
 .calendar-table .next span,

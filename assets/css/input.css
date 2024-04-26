@@ -93,23 +93,36 @@ input {
   color: theme('colors.white') !important;
 }
 
-.daterangepicker .today {
+/* range */
+.daterangepicker:not(.single) .today {
   background-color: transparent !important;
   border: 1px solid theme('colors.primary') !important;
 }
 
-.daterangepicker .today.end-date:not(.start-date),
-.daterangepicker .today.start-date:not(.end-date) {
+.daterangepicker:not(.single) td.end-date {
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.daterangepicker:not(.single) td.start-date {
+  border-radius: 6px 0 0 6px !important;
+}
+
+/* single */
+.daterangepicker.single .today.start-date {
   background-color: theme('colors.primary') !important;
   color: theme('colors.white') !important;
 }
 
-.daterangepicker td.end-date {
-  border-radius: 0 6px 6px 0 !important;
+.daterangepicker.single .today:not(.start-date) {
+  background-color: transparent !important;
+  border: 1px solid theme('colors.primary') !important;
 }
 
-.daterangepicker td.start-date {
-  border-radius: 6px 0 0 6px !important;
+/* Both range and single */
+.daterangepicker .today.end-date:not(.start-date),
+.daterangepicker .today.start-date:not(.end-date) {
+  background-color: theme('colors.primary') !important;
+  color: theme('colors.white') !important;
 }
 
 .calendar-table .next span,

@@ -24,9 +24,10 @@ $(document).ready(function () {
         'Tháng 10',
         'Tháng 11',
         'Tháng 12'
-      ],
+      ]
     },
-    opens: 'center'
+    opens: 'center',
+    singleDatePicker: $('.date-picker').hasClass('single') ? true : false
   })
 
   setDatepickerWidth()
@@ -34,14 +35,29 @@ $(document).ready(function () {
   $('.drp-calendar.right').hide()
   $('.drp-calendar.left').addClass('single')
 
-  $('.calendar-table').on('DOMSubtreeModified', function () {
-    var el = $('.prev.available').parent().children().last()
-    if (el.hasClass('next available')) {
-      return
+  const targetNode = document.querySelector('.calendar-table')
+
+  // Create an observer instance
+  const observer = new MutationObserver(function (mutationsList, observer) {
+    // Check for changes in the target node
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        // Your logic for handling DOM changes here
+        const el = $('.prev.available').parent().children().last()
+        if (el.hasClass('next available')) {
+          return
+        }
+        el.addClass('next available')
+        el.append('<span></span>')
+      }
     }
-    el.addClass('next available')
-    el.append('<span></span>')
   })
+
+  // Configuration of the observer
+  var config = { childList: true, subtree: true }
+
+  // Start observing the target node for configured mutations
+  observer.observe(targetNode, config)
 
   $(window).on('resize', function () {
     setDatepickerWidth()
