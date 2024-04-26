@@ -24,7 +24,6 @@
     />
     <script>
       let isDarkMode = localStorage.getItem('theme') === 'dark'
-      $('.selected-mode').prop('checked', true)
       if (isDarkMode) {
         $('html').addClass('dark')
       } else {
