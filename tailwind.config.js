@@ -25,7 +25,9 @@ module.exports = {
         'yellow-card': '#FFB625',
         red: '#F00',
         gray: '#B3BECB',
-        'gray-1': '#F0F0F0'
+        'gray-1': '#F0F0F0',
+        'dark-grey': '#1C2029',
+        'light-green': '#E8FFFB'
       },
       backgroundImage: {
         'match-detail': "url('./assets/images/match-detail-bg.png')"

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function () {
   // modal element
   const modal = document.querySelector('.modal')
   const modalContent = modal?.querySelector('.modal-content')

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function () {
   const collapseBtnList = document.querySelectorAll('.collapse-btn')
   const selectBetBtnList = document.querySelectorAll('.bet-item')
   const dropdownBtnList = document.querySelectorAll('.dropdown-btn')
@@ -70,4 +70,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
   }
+
+  $('.selected-mode').on('change', function () {
+    const isChecked = $('.selected-mode').prop('checked')
+    if (isChecked) {
+      document.body.classList.add('dark-mode')
+      localStorage.setItem('dark-mode', 'true')
+    } else {
+      document.body.classList.remove('dark-mode')
+      localStorage.removeItem('dark-mode')
+    }
+  })
 })
