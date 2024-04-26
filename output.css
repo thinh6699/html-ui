@@ -615,6 +615,7 @@ header a.absolute {
   border-radius: 4px;
   height: 40px;
   padding-inline: 16px;
+  position: relative;
 }
 
 .league-item {
@@ -679,6 +680,7 @@ header a.absolute {
 
 .list-dropdown {
   position: absolute;
+  z-index: 9999;
   left: 0;
   width: 100%;
   top: 100%;
@@ -845,6 +847,88 @@ input {
   transform: rotate(180deg);
 }
 
+/* Custom date picker */
+
+.drp-selected {
+  display: none !important;
+}
+
+.drp-buttons {
+  text-align: left !important;
+  border-top-color: #F0F0F0 !important;
+}
+
+.drp-calendar {
+  max-width: unset !important;
+  width: 100% !important;
+  padding: 8px 12px 0 12px !important;
+}
+
+.ranges {
+  margin-top: 0 !important;
+}
+
+.daterangepicker {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.daterangepicker .calendar-table table {
+  border-spacing: 6px !important;
+  border-collapse: separate !important;
+}
+
+.daterangepicker td {
+  font-size: 14px !important;
+  height: 32px !important;
+}
+
+.daterangepicker td.in-range {
+  background-color: #EAF6F2 !important;
+}
+
+.daterangepicker td.available {
+  color: #575F6B !important;
+}
+
+.daterangepicker td.off {
+  color: #ABB3BF !important;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+  background-color: #EAF6F2 !important;
+}
+
+.daterangepicker td.start-date:not(.today),
+.daterangepicker td.end-date:not(.today) {
+  background-color: #10C285 !important;
+  color: #fff !important;
+}
+
+.daterangepicker .today {
+  background-color: transparent !important;
+  border: 1px solid #10C285 !important;
+}
+
+.daterangepicker .today.end-date:not(.start-date),
+.daterangepicker .today.start-date:not(.end-date) {
+  background-color: #10C285 !important;
+  color: #fff !important;
+}
+
+.daterangepicker td.end-date {
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.daterangepicker td.start-date {
+  border-radius: 6px 0 0 6px !important;
+}
+
+.calendar-table .next span,
+.calendar-table .prev span {
+  border-color: #575F6B !important;
+}
+
 .collapse{
   visibility: collapse;
 }
@@ -886,6 +970,10 @@ input {
   margin-bottom: 0.75rem;
 }
 
+.\!ml-3{
+  margin-left: 0.75rem !important;
+}
+
 .\!mt-0{
   margin-top: 0px !important;
 }
@@ -920,6 +1008,10 @@ input {
 
 .grid{
   display: grid;
+}
+
+.hidden{
+  display: none;
 }
 
 .h-10{
@@ -970,14 +1062,6 @@ input {
   width: 1px;
 }
 
-.max-w-\[200px\]{
-  max-width: 200px;
-}
-
-.max-w-\[150px\]{
-  max-width: 150px;
-}
-
 .max-w-\[160px\]{
   max-width: 160px;
 }
@@ -993,6 +1077,10 @@ input {
 .rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize{
+  resize: both;
 }
 
 .grid-cols-2{
@@ -1059,10 +1147,6 @@ input {
   gap: 6px;
 }
 
-.overflow-auto{
-  overflow: auto;
-}
-
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1075,6 +1159,10 @@ input {
 
 .rounded{
   border-radius: 0.25rem;
+}
+
+.rounded-\[6px\]{
+  border-radius: 6px;
 }
 
 .border-b{
@@ -1203,16 +1291,12 @@ input {
   padding-bottom: 10px;
 }
 
-.pt-\[43\%\]{
-  padding-top: 43%;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-
 .pb-12{
   padding-bottom: 3rem;
+}
+
+.pt-\[43\%\]{
+  padding-top: 43%;
 }
 
 .text-center{
@@ -1221,6 +1305,11 @@ input {
 
 .text-right{
   text-align: right;
+}
+
+.\!text-sm{
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
 }
 
 .text-\[10px\]{

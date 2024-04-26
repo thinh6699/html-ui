@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danh sách giải đấu</title>
     <link rel="stylesheet" href="./output.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -57,7 +74,7 @@
         </div>
 
         <!-- Search by date -->
-        <div class="input-search-wrapper gap-3 mb-3">
+        <div class="input-search-wrapper gap-3 mb-3 date-picker">
           <div class="flex items-center gap-3 flex-grow">
             <span>01/01/2024</span>
             <svg
@@ -186,5 +203,6 @@
     </main>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/datepicker.js"></script>
   </body>
 </html>

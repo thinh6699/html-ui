@@ -36,6 +36,87 @@ input {
   transform: rotate(180deg);
 }
 
+/* Custom date picker */
+.drp-selected {
+  display: none !important;
+}
+
+.drp-buttons {
+  text-align: left !important;
+  border-top-color: theme('colors.gray-1') !important;
+}
+
+.drp-calendar {
+  max-width: unset !important;
+  width: 100% !important;
+  padding: 8px 12px 0 12px !important;
+}
+
+.ranges {
+  margin-top: 0 !important;
+}
+
+.daterangepicker {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.daterangepicker .calendar-table table {
+  border-spacing: 6px !important;
+  border-collapse: separate !important;
+}
+
+.daterangepicker td {
+  font-size: 14px !important;
+  height: 32px !important;
+}
+
+.daterangepicker td.in-range {
+  background-color: theme('colors.green-light') !important;
+}
+
+.daterangepicker td.available {
+  color: theme('colors.neutral-600') !important;
+}
+
+.daterangepicker td.off {
+  color: theme('colors.neutral-400') !important;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+  background-color: theme('colors.green-light') !important;
+}
+
+.daterangepicker td.start-date:not(.today),
+.daterangepicker td.end-date:not(.today) {
+  background-color: theme('colors.primary') !important;
+  color: theme('colors.white') !important;
+}
+
+.daterangepicker .today {
+  background-color: transparent !important;
+  border: 1px solid theme('colors.primary') !important;
+}
+
+.daterangepicker .today.end-date:not(.start-date),
+.daterangepicker .today.start-date:not(.end-date) {
+  background-color: theme('colors.primary') !important;
+  color: theme('colors.white') !important;
+}
+
+.daterangepicker td.end-date {
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.daterangepicker td.start-date {
+  border-radius: 6px 0 0 6px !important;
+}
+
+.calendar-table .next span,
+.calendar-table .prev span {
+  border-color: theme('colors.neutral-600') !important;
+}
+
 @layer components {
   header {
     background-color: theme('colors.primary');
@@ -58,6 +139,7 @@ input {
     border-radius: 4px;
     height: 40px;
     padding-inline: 16px;
+    position: relative;
   }
 
   .league-item {
@@ -120,6 +202,7 @@ input {
 
   .list-dropdown {
     position: absolute;
+    z-index: 9999;
     left: 0;
     width: 100%;
     top: 100%;
