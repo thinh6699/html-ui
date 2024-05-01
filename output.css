@@ -1159,20 +1159,8 @@ input {
   top: 0px;
 }
 
-.top-6{
-  top: 1.5rem;
-}
-
 .z-\[9999\]{
   z-index: 9999;
-}
-
-.order-1{
-  order: 1;
-}
-
-.order-2{
-  order: 2;
 }
 
 .my-3{
@@ -1202,10 +1190,6 @@ input {
 
 .mb-4{
   margin-bottom: 1rem;
-}
-
-.mb-8{
-  margin-bottom: 2rem;
 }
 
 .mt-2{
@@ -1240,10 +1224,6 @@ input {
   height: 2rem;
 }
 
-.h-\[100vh\]{
-  height: 100vh;
-}
-
 .h-\[1px\]{
   height: 1px;
 }
@@ -1272,16 +1252,8 @@ input {
   width: 2rem;
 }
 
-.w-\[100\%\]{
-  width: 100%;
-}
-
 .w-\[120px\]{
   width: 120px;
-}
-
-.w-\[432px\]{
-  width: 432px;
 }
 
 .w-full{
@@ -1294,10 +1266,6 @@ input {
 
 .max-w-\[160px\]{
   max-width: 160px;
-}
-
-.max-w-full{
-  max-width: 100%;
 }
 
 .flex-shrink-0{
@@ -1343,10 +1311,6 @@ input {
 
 .justify-end{
   justify-content: flex-end;
-}
-
-.justify-center{
-  justify-content: center;
 }
 
 .justify-between{
@@ -1450,16 +1414,8 @@ input {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
-.bg-left-login{
-  background-image: url('./assets/images/login-left-bg.png');
-}
-
 .bg-match-detail{
   background-image: url('./assets/images/match-detail-bg.png');
-}
-
-.bg-right-login{
-  background-image: url('./assets/images/login-right-bg.png');
 }
 
 .from-green-rgba{
@@ -1528,11 +1484,6 @@ input {
   padding-bottom: 10px;
 }
 
-.py-\[14px\]{
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -1552,11 +1503,6 @@ input {
 .\!text-sm{
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-\[10px\]{
@@ -1658,40 +1604,6 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (min-width: 992px){
-  .min-\[992px\]\:order-1{
-    order: 1;
-  }
-
-  .min-\[992px\]\:order-2{
-    order: 2;
-  }
-
-  .min-\[992px\]\:block{
-    display: block;
-  }
-
-  .min-\[992px\]\:hidden{
-    display: none;
-  }
-
-  .min-\[992px\]\:w-\[44\%\]{
-    width: 44%;
-  }
-
-  .min-\[992px\]\:w-auto{
-    width: auto;
-  }
-
-  .min-\[992px\]\:flex-grow{
-    flex-grow: 1;
-  }
-
-  .min-\[992px\]\:flex-row{
-    flex-direction: row;
-  }
 }
 
 .dark\:block:where(.dark, .dark *){
