@@ -1057,8 +1057,13 @@ input {
 
 /* range */
 
-.daterangepicker:not(.single) .today {
+.daterangepicker:not(.single) .today:not(.in-range) {
   background-color: transparent !important;
+  border: 1px solid #10C285 !important;
+}
+
+.daterangepicker:not(.single) .today.in-range {
+  background-color: #EAF6F2 !important;
   border: 1px solid #10C285 !important;
 }
 
@@ -1164,12 +1169,12 @@ input {
   margin-top: 0.5rem;
 }
 
-.mt-4{
-  margin-top: 1rem;
-}
-
 .mt-3{
   margin-top: 0.75rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .flex{

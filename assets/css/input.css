@@ -95,8 +95,13 @@ input {
 }
 
 /* range */
-.daterangepicker:not(.single) .today {
+.daterangepicker:not(.single) .today:not(.in-range) {
   background-color: transparent !important;
+  border: 1px solid theme('colors.primary') !important;
+}
+
+.daterangepicker:not(.single) .today.in-range {
+  background-color: theme('colors.green-light') !important;
   border: 1px solid theme('colors.primary') !important;
 }
 
