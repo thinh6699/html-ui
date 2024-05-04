@@ -59,7 +59,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'match-detail': "url('./assets/images/match-detail-bg.png')"
+        'match-detail': "url('./assets/images/match-detail-bg.png')",
+        'right-login': "url('./assets/images/login-right-bg.png')"
       }
     },
     container: {
