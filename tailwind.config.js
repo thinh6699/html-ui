@@ -60,7 +60,8 @@ module.exports = {
       },
       backgroundImage: {
         'match-detail': "url('./assets/images/match-detail-bg.png')",
-        'right-login': "url('./assets/images/login-right-bg.png')"
+        'right-login': "url('./assets/images/login-right-bg.png')",
+        'left-login': "url('./assets/images/login-left-bg.png')"
       }
     },
     container: {

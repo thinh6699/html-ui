@@ -1163,18 +1163,6 @@ input {
   top: 1.5rem;
 }
 
-.left-10{
-  left: 2.5rem;
-}
-
-.left-\[60px\]{
-  left: 60px;
-}
-
-.left-6{
-  left: 1.5rem;
-}
-
 .z-\[9999\]{
   z-index: 9999;
 }
@@ -1290,10 +1278,6 @@ input {
 
 .w-\[120px\]{
   width: 120px;
-}
-
-.w-\[400px\]{
-  width: 400px;
 }
 
 .w-\[432px\]{
@@ -1437,11 +1421,6 @@ input {
   border-color: rgb(16 194 133 / var(--tw-border-opacity));
 }
 
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-neutral-100{
   --tw-bg-opacity: 1;
   background-color: rgb(235 237 242 / var(--tw-bg-opacity));
@@ -1469,6 +1448,10 @@ input {
 
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-left-login{
+  background-image: url('./assets/images/login-left-bg.png');
 }
 
 .bg-match-detail{
