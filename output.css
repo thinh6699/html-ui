@@ -1677,8 +1677,16 @@ input {
     display: none;
   }
 
-  .min-\[992px\]\:w-1\/2{
-    width: 50%;
+  .min-\[992px\]\:w-\[44\%\]{
+    width: 44%;
+  }
+
+  .min-\[992px\]\:w-auto{
+    width: auto;
+  }
+
+  .min-\[992px\]\:flex-grow{
+    flex-grow: 1;
   }
 
   .min-\[992px\]\:flex-row{
